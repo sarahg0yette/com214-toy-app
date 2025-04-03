@@ -56,6 +56,15 @@ group :development do
   gem "web-console"
 end
 
+group :production do
+  gem "pg", "1.3.5"
+end
+
+group :development, :test do
+  gem "sqlite3", "1.4.2"
+  gem "debug", "1.5.0", platforms: %i[ mri mingw x64_mingw ]
+end
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
